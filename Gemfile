@@ -9,7 +9,7 @@ group :test do
   gem 'rake'
   gem 'rspec'
   gem 'rubocop'
-  gem 'simplecov', require: false
-  gem 'simplecov-console', require: false
-  
+  gem 'simplecov', :require => false, :group => :test
+  gem 'simplecov-console', :require => false
+
 end
