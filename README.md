@@ -31,3 +31,13 @@ should use TDD.
 Please use git and commit regularly so we can see your thought process.
 
 We will review the code and discuss your approach when you have finished.
+
+## How to install
+
+- Clone this repository: ```$ git clone https://github.com/rolandosorbelli/marketplace-ruby```
+- Navigate into the folder ```$ cd marketplace-ruby```
+- Install all the gems by running ```$ bundle install```
+
+## How to run
+
+Once you are in the root folder of the app through your Terminal/Command Line just run the command: ```$ rake test_data``` and you will see 3 different scenarios with items in the basket and their own total price calculated according to the discounts applied.
