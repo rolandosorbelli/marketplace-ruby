@@ -1,5 +1,5 @@
+# Describes a Product object
 class Product
-
   attr_accessor :code, :name, :price
 
   def initialize(code, name, price)
@@ -7,5 +7,4 @@ class Product
     @name = name
     @price = price
   end
-
 end

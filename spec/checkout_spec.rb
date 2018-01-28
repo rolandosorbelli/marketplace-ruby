@@ -2,12 +2,10 @@ require 'product'
 require 'checkout'
 
 describe Checkout do
-  subject {Checkout.new('promotion_name')}
-  let(:product1) {Product.new('001', 'Very Cheap Chair', 9.25)}
-  let(:product2) {Product.new('002', 'Little Table', 45)}
-  let(:product3) {Product.new('003', 'Funky Light', 19.95)}
-
-
+  subject { Checkout.new('promotion_name') }
+  let(:product1) { Product.new('001', 'Very Cheap Chair', 9.25) }
+  let(:product2) { Product.new('002', 'Little Table', 45) }
+  let(:product3) { Product.new('003', 'Funky Light', 19.95) }
 
   it 'should return an empty basket when initialised' do
     expect(subject.basket).to eq([])
@@ -44,5 +42,15 @@ describe Checkout do
     expect(subject.total).to eq(81)
   end
 
+  it 'checks if in the basket there are 2 or more "Very Cheap Chair"' do
+    subject.scan(product1)
+    subject.scan(product1)
+    expect(subject.two_ore_more_very_cheap_chairs?).to eq(true)
+  end
 
+  it 'changes the price of the "Very Cheap Chair" if 2 or more in the basket' do
+    subject.scan(product1)
+    subject.scan(product1)
+    expect(subject.total).to eq(17)
+  end
 end
