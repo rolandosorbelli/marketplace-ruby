@@ -8,9 +8,9 @@ task :test_data do
   item2 = Product.new('002', 'Little Table', 45)
   item3 = Product.new('003', 'Funky Light', 19.95)
 
-  promotional_rules = ['ten_percent_off_discount', 'very_cheap_chair_discount']
+  promotional_rules = %w[ten_percent_off_discount very_cheap_chair_discount]
 
-  puts 'Test Data'
+  puts 'Test data'
   puts '---------'
 
   # Test data 1
@@ -21,7 +21,7 @@ task :test_data do
   price = co1.total
 
   puts 'Basket: ' + item1.code + ', ' + item2.code + ', ' + item3.code
-  puts 'Total price expected: £' + price
+  puts 'Total price expected: £' + price.to_s
   puts
 
   # Test data 2
@@ -32,7 +32,7 @@ task :test_data do
   price = co2.total
 
   puts 'Basket: ' + item1.code + ', ' + item3.code + ', ' + item1.code
-  puts 'Total price expected: £' + price
+  puts 'Total price expected: £' + price.to_s
   puts
 
   # Test data 3
@@ -44,6 +44,6 @@ task :test_data do
   price = co3.total
 
   puts 'Basket: ' + item1.code + ', ' + item2.code + ', ' + item1.code + ', ' + item3.code
-  puts 'Total price expected: £' + price
+  puts 'Total price expected: £' + price.to_s
   puts
 end

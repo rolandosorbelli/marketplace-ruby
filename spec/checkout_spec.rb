@@ -30,7 +30,7 @@ describe Checkout do
     expect(subject.basket.first.price).to eq(9.25)
   end
 
-  it 'checks if the subtotal is greater than 60 pounds' do
+  it 'checks if the subtotal is greater than 60£' do
     subject.scan(product2)
     subject.scan(product2)
     expect(subject.spent_over_60_pounds?).to eq(true)
@@ -39,7 +39,7 @@ describe Checkout do
   it 'deducts the 10% if the clients spends more than £60' do
     subject.scan(product2)
     subject.scan(product2)
-    expect(subject.total).to eq(81)
+    expect(subject.total).to eq(81.0)
   end
 
   it 'checks if in the basket there are 2 or more "Very Cheap Chair"' do
@@ -51,6 +51,6 @@ describe Checkout do
   it 'changes the price of the "Very Cheap Chair" if 2 or more in the basket' do
     subject.scan(product1)
     subject.scan(product1)
-    expect(subject.total).to eq(17)
+    expect(subject.total).to eq(17.0)
   end
 end
