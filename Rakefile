@@ -13,7 +13,13 @@ task :product1 do
   checkout1 = Checkout.new('promotion')
   checkout1.scan(product1)
   checkout1.scan(product1)
-  puts checkout1.basket
+  checkout1.scan(product1)
+  checkout1.scan(product1)
+  checkout1.scan(product1)
+  checkout1.scan(product1)
+  checkout1.scan(product1)
+  puts checkout1.basket.first.name
+  puts checkout1.subtotal
   puts checkout1.total
 
 end
