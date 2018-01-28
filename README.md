@@ -40,4 +40,22 @@ We will review the code and discuss your approach when you have finished.
 
 ## How to run
 
-Once you are in the root folder of the app through your Terminal/Command Line just run the command: ```$ rake test_data``` and you will see 3 different scenarios with items in the basket and their own total price calculated according to the discounts applied.
+Once you are in the root folder of the app through your Terminal/Command Line just run the command:
+```$ rake test_data
+```
+and you will see 3 different scenarios with items in the basket and their own total price calculated according to the discounts applied.
+
+## How to test
+
+Once you are in the root folder of the app through your Terminal/Command Line just run the command:
+```$ rspec
+```
+and you will see all the tests that have been done. I could reach 100% test coverage by monitoring all the code that has to be tested using the gem ```simplecov```.
+
+## Tech
+
+- [Ruby](https://www.ruby-lang.org/en/);
+- [RSpec](http://rspec.info/) for testing purposes;
+- [Rake](https://github.com/ruby/rake), a Make-like program implemented in Ruby that I used to run the Checkout System;
+- [SimpleCov](https://github.com/colszowka/simplecov) for test coverage;
+- [Rubocop](https://rubocop.readthedocs.io/en/latest/) for linting;
