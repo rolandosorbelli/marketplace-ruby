@@ -1,10 +1,10 @@
 require 'product'
 
 describe Product do
-  subject { Product.new(0o01, 'Very Cheap Chair', 9.25) }
+  subject { Product.new(001, 'Very Cheap Chair', 9.25) }
 
   it 'should return the code of the product' do
-    expect(subject.code).to eq(0o01)
+    expect(subject.code).to eq(001)
   end
 
   it 'should return the name of the product' do

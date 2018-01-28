@@ -39,6 +39,6 @@ class Checkout
   def total
     very_cheap_chair_discount
     ten_percent_off_discount
-    @subtotal
+    @subtotal.round(2).to_s
   end
 end
