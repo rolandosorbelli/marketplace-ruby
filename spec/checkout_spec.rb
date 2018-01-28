@@ -11,7 +11,7 @@ describe Checkout do
     expect(subject.basket).to eq([])
   end
 
-  it 'should return a subtotal equals to 0 when itialised' do
+  it 'should return a subtotal equals to 0 when initialised' do
     expect(subject.subtotal).to eq(0)
   end
 
