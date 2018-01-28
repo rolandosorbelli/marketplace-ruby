@@ -10,4 +10,10 @@ task :product1 do
   puts product1.name
   puts product1.price
 
+  checkout1 = Checkout.new('promotion')
+  checkout1.scan(product1)
+  checkout1.scan(product1)
+  puts checkout1.basket
+  puts checkout1.total
+
 end
